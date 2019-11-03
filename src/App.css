@@ -1,22 +1,152 @@
-.App {
-  text-align: center;
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #000;
+  --mainGrey: #ececec;
+  --darkGrey: rgb(51,51,51);
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  padding-top: 66px;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+.test {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.6rem 2rem;
+  background: var(--mainBlack);
+  z-index: 1;
 }
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-img {
+  width: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 2.1rem;
+  color: var(--mainWhite);
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 0;
+  color: var(--mainWhite);
+  transition: var(--mainTransition);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: 'Black Ops One', cursive;
+  
+  letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.show-nav {
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+/* End of Navbar*/
+
+/* Footer */
+.footer {
+  position: relative;
+  height: 4rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0.3rem 0 0.3rem 0;
+  background: var(--darkGrey);
+  color: var(--mainWhite);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links {
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 0;
+  color: var(--mainWhite);
+  transition: var(--mainTransition);
+  font-size: 1.6rem;
+  margin: 0 1.5rem;
+  padding: 0.5rem 0;
+  
+}
+.footer-links a:hover {
+  color: var(--primaryColor);
+}
+
+/* End of Footer*/
