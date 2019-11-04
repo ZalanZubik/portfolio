@@ -1,14 +1,10 @@
 :root {
-  --primaryColor: #af9a7d;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBlack: #000;
-  --mainGrey: #ececec;
-  --darkGrey: rgb(51,51,51);
+  --mainWhite: #F7F7F7;
+  --mainBlack: #202020;
+  --mainGrey: #ECECEC;
+  --darkGrey: #333333;
+  --hoverColor: #CC0000;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 3px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -19,14 +15,12 @@
 }
 
 body {
-  padding-top: 66px;
+  padding-top: 3.7rem;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
   line-height: 1.4;
-}
-.test {
-  min-height: 100vh;
 }
 
 /* Navbar */
@@ -60,6 +54,11 @@ body {
 .nav-icon {
   font-size: 2.1rem;
   color: var(--mainWhite);
+  transition: var(--mainTransition);
+}
+
+.nav-icon:hover {
+  color: var(--hoverColor);
 }
 
 .nav-links {
@@ -78,15 +77,14 @@ body {
   text-transform: uppercase;
   font-size: 1.1rem;
   font-family: 'Black Ops One', cursive;
-  
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: 2px;
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: var(--hoverColor);
 }
 
 .show-nav {
-  height: 100px;
+  height: 6rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -110,6 +108,18 @@ body {
 }
 /* End of Navbar*/
 
+/* Error Page*/
+.error-page {
+  min-height: calc(100vh - 4rem - 3.7rem);
+  display: flex;
+  padding-bottom: 10rem;
+  align-items: center;
+  justify-content: center;
+  background: url('./images/ErrorImg.jpg') center/cover no-repeat;
+  background-color: var(--mainBlack);
+}
+/* End of Error Page*/
+
 /* Footer */
 .footer {
   position: relative;
@@ -126,8 +136,6 @@ body {
 }
 
 .footer-links {
-  overflow: hidden;
-  transition: var(--mainTransition);
   list-style-type: none;
   height: auto;
   display: flex;
@@ -136,17 +144,12 @@ body {
 
 .footer-links a {
   display: block;
-  text-decoration: none;
-  padding: 0.7rem 0;
   color: var(--mainWhite);
-  transition: var(--mainTransition);
   font-size: 1.6rem;
   margin: 0 1.5rem;
-  padding: 0.5rem 0;
-  
+  transition: transform 0.4s ease-out;
 }
 .footer-links a:hover {
-  color: var(--primaryColor);
+  transform: translateY(6px);
 }
-
 /* End of Footer*/

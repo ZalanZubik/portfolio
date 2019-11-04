@@ -16,18 +16,32 @@ class ScrollUpButton extends React.Component {
   }
 
   handleScroll() {
-    if (window.pageYOffset > 380 ) {
-      document.getElementById("scrollUpButton").style.display = "flex";
+    const scrollButton = document.getElementById("scrollUpButton");
+
+    if (window.pageYOffset > 380) {
+      if (!scrollButton.classList.contains("btnFadeIn")) {
+        scrollButton.classList.remove("btnFadeOut");
+        scrollButton.classList.add("btnFadeIn");
+        scrollButton.style.display = "flex";
+      }
     }
     else {
-      document.getElementById("scrollUpButton").style.display = "none";
+      if (scrollButton.classList.contains("btnFadeIn")) {
+        scrollButton.classList.remove("btnFadeIn");
+        scrollButton.classList.add("btnFadeOut");
+        setTimeout(() => {
+          scrollButton.style.display = "none";
+        }, 500);
+      }
     }
   }
 
   render() {
     return (
-      <ButtonContainer title="Back To Top" id="scrollUpButton" onClick={this.scrollToTop}>
-        <IoIosArrowUp className="button-icon" />
+      <ButtonContainer>
+        <div className="scroll-button" title="Back To Top" id="scrollUpButton" onClick={this.scrollToTop}>
+          <IoIosArrowUp className="button-icon" />
+        </div>
       </ButtonContainer>
     )
   }
@@ -36,21 +50,58 @@ class ScrollUpButton extends React.Component {
 export default ScrollUpButton;
 
 const ButtonContainer = styled.div`
+  .scroll-button {
   background-color: #2b2b2c;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.4rem;
+  height: 3.4rem;
   position: fixed; 
-  bottom: 3rem;
-  right: 3rem;
-  z-index: 1;
+  bottom: 2.7rem;
+  right: 2.7rem;
   border-radius: 25%;
   cursor: pointer;
   display: none;
   align-items: center;
   justify-content: center;
-
+  z-index: 1;
+  }
+  
   .button-icon {
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: var(--mainWhite);
+    transition: transform 0.5s ease-out;
+  }
+
+  .button-icon:hover {
+    transform: translateY(-4px);
+  }
+
+  .btnFadeIn {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+    animation-name: btnFadeIn;
+  }
+
+  @keyframes btnFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .btnFadeOut {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;  
+    animation-name: btnFadeOut;
+  }
+
+  @keyframes btnFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 `;
