@@ -116,9 +116,18 @@ body {
   align-items: center;
   justify-content: center;
   background: url('./images/ErrorImg.jpg') center/cover no-repeat;
-  background-color: var(--mainBlack);
 }
 /* End of Error Page*/
+
+/* Introduction */
+.intro-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./images/IntroImg.jpg') center/cover no-repeat;
+}
+/* End of Introduction*/
 
 /* Footer */
 .footer {
@@ -147,6 +156,7 @@ body {
   color: var(--mainWhite);
   font-size: 1.6rem;
   margin: 0 1.5rem;
+  padding: 4px;
   transition: transform 0.4s ease-out;
 }
 .footer-links a:hover {
