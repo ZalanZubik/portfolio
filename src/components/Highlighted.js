@@ -17,7 +17,6 @@ class Highlighted extends React.Component {
 export default Highlighted;
 
 const HighlightedContainer = styled.section`
-  background-color: var(--mainGrey);
   text-align: center;
   padding: 2rem;
 

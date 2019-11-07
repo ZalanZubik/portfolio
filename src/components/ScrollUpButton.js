@@ -51,7 +51,7 @@ export default ScrollUpButton;
 
 const ButtonContainer = styled.div`
   .scroll-button {
-  background-color: #2b2b2c;
+  background-color: #002E30;
   width: 3.4rem;
   height: 3.4rem;
   position: fixed; 

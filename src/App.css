@@ -1,9 +1,10 @@
 :root {
+  --backgroundColor: #ECECEC;
   --mainWhite: #F7F7F7;
-  --mainBlack: #202020;
-  --mainGrey: #ECECEC;
-  --darkGrey: #333333;
-  --hoverColor: #CC0000;
+  --darkestBlue: #002E30;
+  --darkBlue: #003B3E;
+  --lightBlue: #017A80;
+  --hoverColor: #01A9B0;
   --mainTransition: all 0.3s linear;
 }
 
@@ -16,8 +17,8 @@
 
 body {
   padding-top: 3.7rem;
-  color: var(--mainBlack);
-  background: var(--mainWhite);
+  color: var(--darkestBlue);
+  background-color: var(--backgroundColor);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
@@ -30,7 +31,7 @@ body {
   left: 0;
   width: 100%;
   padding: 0.6rem 2rem;
-  background: var(--mainBlack);
+  background: var(--darkestBlue);
   z-index: 1;
 }
 
@@ -137,7 +138,7 @@ body {
   left: 0;
   bottom: 0;
   padding: 0.3rem 0 0.3rem 0;
-  background: var(--darkGrey);
+  background: var(--darkBlue);
   color: var(--mainWhite);
   display: flex;
   justify-content: space-around;
