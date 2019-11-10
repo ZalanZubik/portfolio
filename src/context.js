@@ -43,10 +43,16 @@ class ProjectProvider extends React.Component {
     return tempItems;
   }
 
+  getProject = slug => {
+    let tempProjects = [...this.state.projects];
+    return tempProjects.find(project => project.slug === slug);
+  }
+
   render() {
     return (
       <ProjectContext.Provider value={{
-        ...this.state
+        ...this.state,
+        getProject: this.getProject
       }}>
         {this.props.children}
       </ProjectContext.Provider>

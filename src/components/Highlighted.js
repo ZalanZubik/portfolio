@@ -19,7 +19,7 @@ class Highlighted extends React.Component {
         <div className="highlighted-projects">
           {highlightedProjects}
         </div>
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects">all projects</Link>
       </HighlightedContainer>
     )
   }
@@ -30,14 +30,15 @@ export default Highlighted;
 const HighlightedContainer = styled.section`
   text-align: center;
   padding: 2.5rem;
+  background-color: lightblue;
 
   .highlighted-projects {
     width: 95vw;
-    max-width: 1170px;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     grid-row-gap: 2rem;
-    grid-column-gap: 40px;
+    grid-column-gap: 3rem;
     margin: 0 auto;
   }
 `;
