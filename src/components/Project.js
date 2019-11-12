@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Project = ({ project }) => {
-  const { name, images, slug } = project;
+  const { images, slug } = project;
   return (
     <ProjectContainer>
-      <h2>{name}</h2>
-      <div className="img-container">
-        <img src={images[0]} alt="project thumbnail" />
-        <Link to={`/projects/${slug}`} className="project-link">Details</Link>
-      </div>
-     
+      <Link to={`/projects/${slug}`} className="project-link">
+        <img src={images[0]} alt="project thumbnail" className="project-thumbnail" />
+        <div className="details-label">Details</div>
+      </Link>
     </ProjectContainer>
   )
 }
@@ -20,42 +18,44 @@ export default Project;
 
 const ProjectContainer = styled.article`
   margin-top: 2rem;
-  border: 3px solid black;
+  background-color: #000;
+  border-radius: 7px;
+  position: relative;
+  -webkit-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
+  -moz-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
+  box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
+  overflow: hidden;
 
-  h2 {
-    background-color: grey;
-    border-bottom: 3px solid black;
-  }
-
-  .img-container {
-    position: relative;
-  }
-  
-  .img-container img {
+  .project-thumbnail {
     width: 100%;
     display: block;
+    border-radius: 7px;
+    transition: opacity 550ms ease-in, transform 550ms ease-in;
   }
 
-  .img-container:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  .img-container:hover img {
-    opacity: 0.3;
-  }
-
-  .project-link {
+  .details-label {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: scale(0);
     text-decoration: none;
-    border: 1px solid black;
-    padding: 0.6rem 2.4rem;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--mainWhite);
+    padding: 0.4rem 1.5rem;
     color: var(--mainWhite);
+    border-radius: 7px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 550ms ease-in;
   }
 
-  .img-container:hover .project-link {
-    transform: translate(-50%, -50%) scale(1);
+  &:hover .details-label {
+    opacity: 0.9;
+  }
+  &:hover .project-thumbnail {
+    opacity: 0.5;
+    transform: scale(1.03);
+  }
+
+  &:hover {
   }
 `;

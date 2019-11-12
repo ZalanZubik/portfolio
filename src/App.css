@@ -1,8 +1,8 @@
 :root {
   --backgroundColor: #ECECEC;
   --mainWhite: #F7F7F7;
-  --darkestBlue: #002E30;
   --darkBlue: #003B3E;
+  --darkestBlue: #002E30;
   --lightBlue: #017A80;
   --hoverColor: #01A9B0;
   --mainTransition: all 0.3s linear;
@@ -137,7 +137,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 0.3rem 0 0.3rem 0;
+  padding: 0.5rem 0 0.3rem 0;
   background: var(--darkBlue);
   color: var(--mainWhite);
   display: flex;
