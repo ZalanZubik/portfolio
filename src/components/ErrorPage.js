@@ -10,7 +10,6 @@ const ErrorPage = () => {
       <h2>The page you were looking for cannot be found.</h2>
       <Link className="error-button" to="/">return to home</Link>
       </ErrorContainer>
-      
     </div>
   )
 }
@@ -35,18 +34,20 @@ const ErrorContainer = styled.div`
   }
 
   .error-button {
-    padding: 0.7rem 1.6rem;
+    padding: 0.7rem 1rem;
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'Black Ops One', cursive;
     color: var(--mainWhite);
     border: 2px solid var(--mainWhite);
     border-radius: 5px;
-    transition: var(--mainTransition);
+    transition: color 350ms ease-out, border 350ms ease-out;
   }
 
   .error-button:hover {
-    background-color: rgba(255,255,255,0.2);
+    color: var(--hoverColor);
+    border: 2px solid var(--hoverColor);
   }
 
 `;

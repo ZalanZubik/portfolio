@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "contentful": "^7.10.0",
+    "history": "^4.10.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-icons": "^3.8.0",

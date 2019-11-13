@@ -12,7 +12,7 @@ class ScrollUpButton extends React.Component {
   }
 
   scrollToTop() {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   handleScroll() {
@@ -50,6 +50,7 @@ class ScrollUpButton extends React.Component {
 export default ScrollUpButton;
 
 const ButtonContainer = styled.div`
+
   .scroll-button {
   background-color: #002E30;
   width: 3.4rem;

@@ -19,7 +19,6 @@ export default Project;
 const ProjectContainer = styled.article`
   margin-top: 2rem;
   background-color: #000;
-  border-radius: 7px;
   position: relative;
   -webkit-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
   -moz-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
@@ -29,7 +28,6 @@ const ProjectContainer = styled.article`
   .project-thumbnail {
     width: 100%;
     display: block;
-    border-radius: 7px;
     transition: opacity 550ms ease-in, transform 550ms ease-in;
   }
 

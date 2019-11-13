@@ -5,14 +5,12 @@
   --darkestBlue: #002E30;
   --lightBlue: #017A80;
   --hoverColor: #01A9B0;
-  --mainTransition: all 0.3s linear;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -55,7 +53,7 @@ body {
 .nav-icon {
   font-size: 2.1rem;
   color: var(--mainWhite);
-  transition: var(--mainTransition);
+  transition: color 0.3s linear;
 }
 
 .nav-icon:hover {
@@ -65,7 +63,6 @@ body {
 .nav-links {
   height: 0;
   overflow: hidden;
-  transition: var(--mainTransition);
   list-style-type: none;
 }
 .nav-links a {
@@ -73,7 +70,7 @@ body {
   text-decoration: none;
   padding: 0.7rem 0;
   color: var(--mainWhite);
-  transition: var(--mainTransition);
+  transition: color 0.3s linear;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.1rem;

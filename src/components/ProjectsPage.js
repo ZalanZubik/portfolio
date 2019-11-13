@@ -29,13 +29,21 @@ const ProjectsContainer = styled.section`
   min-height: calc(100vh - 3.7rem - 4rem);
   text-align: center;
   padding: 2.5rem;
-  background-color: lightblue;
+
+  h1 {
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
 
   .projects {
     width: 95vw;
     max-width: 1100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-row-gap: 2rem;
     grid-column-gap: 3rem;
     margin: 0 auto;
