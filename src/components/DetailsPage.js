@@ -8,7 +8,6 @@ import { FaCode } from 'react-icons/fa';
 class DetailsPage extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       slug: this.props.match.params.slug
     };
@@ -17,7 +16,7 @@ class DetailsPage extends React.Component {
   static contextType = ProjectContext;
 
   render() {
-    const { getProject } = this.context;
+    const { getProject, openModal } = this.context;
     const project = getProject(this.state.slug);
     
     if (!project) {
@@ -36,28 +35,30 @@ class DetailsPage extends React.Component {
     const [thumbnail, mainImage, ...detailsImages] = images;
 
     return (
-      <DetailsContainer>
-        <h1 className="project-title">{name}</h1>
-        <div className="project-grid">
-          <div className="grid-left">
-            <img src={mainImage} alt="Project" className="project-image" />
-            <div className="button-container">
-              {presentationUrl ? <a className="grid-left-button" href={presentationUrl} target="_blank" rel="noopener noreferrer"><IoMdEye className="button-icon" /> view</a> : ""}
-              {codeUrl ? <a className="grid-left-button" href={codeUrl} target="_blank" rel="noopener noreferrer"><FaCode className="button-icon" /> code</a> : ""}
+      <>
+        <DetailsContainer>
+          <h1 className="project-title">{name}</h1>
+          <div className="project-grid">
+            <div className="grid-left">
+              <img src={mainImage} alt="Project" className="project-image" />
+              <div className="button-container">
+                {presentationUrl ? <a className="grid-left-button" href={presentationUrl} target="_blank" rel="noopener noreferrer"><IoMdEye className="button-icon" /> view</a> : ""}
+                {codeUrl ? <a className="grid-left-button" href={codeUrl} target="_blank" rel="noopener noreferrer"><FaCode className="button-icon" /> code</a> : ""}
+              </div>
+            </div>
+            <div className="grid-right">
+              <ul>
+                {skills.map((skill, index) => <li key={index}>{skill}</li>)}
+              </ul>
+              <p className="about">About</p>
+              <p className="description">{description}</p>
             </div>
           </div>
-          <div className="grid-right">
-            <ul>
-              {skills.map((skill, index) => <li key={index}>{skill}</li>)}
-            </ul>
-            <p className="about">About</p>
-            <p className="description">{description}</p>
+          <div className="project-images">
+            {detailsImages.map((image, index) => <img src={image} key={index} alt="project content" onClick={() => openModal(image)} className="project-image" />)}
           </div>
-        </div>
-        <div className="project-images">
-          {detailsImages.map((image, index) => <img src={image} key={index} alt={name} className="project-image" />)}
-        </div>
-      </DetailsContainer>
+        </DetailsContainer>
+      </>
     )
   }
 }
@@ -164,6 +165,10 @@ const DetailsContainer = styled.div`
     -webkit-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
     -moz-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
     box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
+  }
+
+  .project-images img {
+    cursor: pointer;
   }
 
   /* Media Queries */

@@ -7,7 +7,9 @@ const ProjectConsumer = ProjectContext.Consumer;
 class ProjectProvider extends React.Component {
   state = {
     projects: [],
-    highlightedProjects: []
+    highlightedProjects: [],
+    modalOpen: false,
+    modalImage: null
   }
 
   /* Get data from Contentful */
@@ -48,11 +50,27 @@ class ProjectProvider extends React.Component {
     return tempProjects.find(project => project.slug === slug);
   }
 
+  openModal = image => {
+    this.setState({
+      modalOpen: true,
+      modalImage: image
+    });
+    console.log(image);
+  }
+
+  closeModal = () => {
+    this.setState({
+      modalOpen: false
+    });
+  }
+
   render() {
     return (
       <ProjectContext.Provider value={{
         ...this.state,
-        getProject: this.getProject
+        getProject: this.getProject,
+        openModal: this.openModal,
+        closeModal: this.closeModal
       }}>
         {this.props.children}
       </ProjectContext.Provider>

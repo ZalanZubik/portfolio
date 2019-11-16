@@ -8,6 +8,7 @@ import DetailsPage from './components/DetailsPage';
 import ErrorPage from './components/ErrorPage';
 import ScrollUpButton from './components/ScrollUpButton';
 import { Route, Switch } from 'react-router-dom';
+import Modal from './components/Modal';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route component={ErrorPage} />
       </Switch>
       <ScrollUpButton />
+      <Modal />
       <Footer />
     </>
   );
