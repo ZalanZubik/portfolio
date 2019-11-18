@@ -49,11 +49,9 @@ const ProjectContainer = styled.article`
   &:hover .details-label {
     opacity: 0.9;
   }
+
   &:hover .project-thumbnail {
     opacity: 0.5;
     transform: scale(1.03);
-  }
-
-  &:hover {
   }
 `;

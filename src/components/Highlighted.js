@@ -15,7 +15,7 @@ class Highlighted extends React.Component {
 
     return (
       <HighlightedContainer>
-        <h1>Highlighted Projects</h1>
+        <h1 id="highlighted">Highlighted Projects</h1>
         <div className="highlighted-projects">
           {highlightedProjects}
         </div>
@@ -30,6 +30,7 @@ export default Highlighted;
 const HighlightedContainer = styled.section`
   text-align: center;
   padding: 4rem 0 3rem 0;
+  background: var(--backgroundColor);
 
   h1 {
     padding-bottom: 1.4rem;
@@ -66,6 +67,15 @@ const HighlightedContainer = styled.section`
   .all-projects-button:hover {
     border: 2px solid var(--hoverColor);
     color: var(--hoverColor);
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 788px) {
+    .highlighted-projects {
+      width: 80vw;
+    }
+    
   }
 
 `;

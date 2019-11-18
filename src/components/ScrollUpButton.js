@@ -52,18 +52,18 @@ export default ScrollUpButton;
 const ButtonContainer = styled.div`
 
   .scroll-button {
-  background: var(--darkestBlue);
-  width: 3.4rem;
-  height: 3.4rem;
-  position: fixed; 
-  bottom: 2.7rem;
-  right: 2.7rem;
-  border-radius: 25%;
-  cursor: pointer;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+    background: #004447;
+    width: 3.4rem;
+    height: 3.4rem;
+    position: fixed; 
+    bottom: 2.7rem;
+    right: 2.7rem;
+    border-radius: 25%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
   }
   
   .button-icon {
@@ -77,32 +77,32 @@ const ButtonContainer = styled.div`
   }
 
   .btnFadeIn {
-    animation-duration: 0.7s;
-    animation-fill-mode: both;
     animation-name: btnFadeIn;
+    animation-fill-mode: both;
+    animation-duration: 0.7s;
   }
 
   @keyframes btnFadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from {opacity: 0}
+    to {opacity: 1}
   }
 
   .btnFadeOut {
-    animation-duration: 0.5s;
-    animation-fill-mode: both;  
     animation-name: btnFadeOut;
+    animation-fill-mode: both;  
+    animation-duration: 0.5s;
   }
 
   @keyframes btnFadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
+    from {opacity: 1}
+    to {opacity: 0}
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 767px) {
+    .scroll-button {
+      visibility: hidden;
     }
   }
 `;

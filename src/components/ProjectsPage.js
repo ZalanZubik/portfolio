@@ -14,7 +14,7 @@ class ProjectsPage extends React.Component {
 
     return (
       <ProjectsContainer>
-      <h1>Projects</h1>
+      <h1 className="projects-title">Projects</h1>
       <div className="projects">
         {projects}
       </div>
@@ -26,11 +26,12 @@ class ProjectsPage extends React.Component {
 export default ProjectsPage;
 
 const ProjectsContainer = styled.section`
+  background: var(--backgroundColor);
   min-height: calc(100vh - 3.7rem - 4rem);
   text-align: center;
   padding: 2.5rem;
 
-  h1 {
+  .projects-title {
     text-align: center;
     font-family: 'Black Ops One', cursive;
     text-transform: uppercase;
@@ -40,12 +41,21 @@ const ProjectsContainer = styled.section`
   }
 
   .projects {
-    width: 95vw;
     max-width: 1100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-row-gap: 2rem;
     grid-column-gap: 3rem;
     margin: 0 auto;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 830px) {
+    .projects-title {
+      font-size: 2.5rem;
+    }
+    .projects {
+      width: 80vw;
+    }
   }
 `;
