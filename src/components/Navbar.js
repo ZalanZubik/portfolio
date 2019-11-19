@@ -65,7 +65,6 @@ const NavContainer = styled.nav`
   .nav-icon {
     font-size: 2.1rem;
     color: var(--mainWhite);
-    transition: color 0.3s linear;
   }
 
   .nav-btn:hover .nav-icon {
@@ -76,6 +75,7 @@ const NavContainer = styled.nav`
     height: 0;
     overflow: hidden;
     list-style-type: none;
+    transition: all 0.3s linear;
   }
 
   .nav-links a {
@@ -97,13 +97,6 @@ const NavContainer = styled.nav`
 
   .show-nav {
     height: 6rem;
-    animation-name: open;
-    animation-duration: 0.5s;
-  }
-
-  @keyframes open {
-    from {height: 0} 
-    to {height: 6rem}
   }
 
   /* Media Queries */

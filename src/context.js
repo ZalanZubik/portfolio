@@ -51,11 +51,12 @@ class ProjectProvider extends React.Component {
   }
 
   openModal = image => {
-    this.setState({
-      modalOpen: true,
-      modalImage: image
-    });
-    console.log(image);
+    if (window.innerWidth > 773) {
+      this.setState({
+        modalOpen: true,
+        modalImage: image
+      });
+    }
   }
 
   closeModal = () => {

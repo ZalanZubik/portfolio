@@ -29,7 +29,7 @@ class Modal extends React.Component {
 export default Modal;
 
 const ModalContainer = styled.div`
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: 0;
   width: 100%;
@@ -43,7 +43,7 @@ const ModalContainer = styled.div`
   .modal-content {
     background: white;
     position: relative;
-    width: 70%;
+    width: 75%;
     animation-name: zoom;
     animation-duration: 0.5s;
   }
@@ -62,7 +62,7 @@ const ModalContainer = styled.div`
   .modal-btn {
     position: absolute;
     right: -40px;
-    top: 0;
+    bottom: calc(100% - 2.25rem);
     cursor: pointer;
     border: 2px solid var(--mainWhite);
     border-radius: 5px;
@@ -96,5 +96,24 @@ const ModalContainer = styled.div`
 
   .modal-btn:hover .modal-btn-icon {
     color: var(--hoverColor);
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 1500px) {
+    .modal-content {
+      width: 85%;
+    }
+  }
+
+  @media screen and (max-width: 1040px) {
+    .modal-content {
+      width: 94%;
+    }
+
+    .modal-btn {
+      right: calc(50% - 1rem - 2px);
+      bottom: -2.5rem;
+    }
   }
 `;

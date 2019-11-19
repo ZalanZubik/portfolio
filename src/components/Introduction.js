@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import IntroImg from '../images/IntroImg.jpg';
-import { IoMdArrowDown } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
 
 class Introduction extends React.Component {
 
@@ -26,7 +26,7 @@ class Introduction extends React.Component {
             <li><a title="Email" href="mailto:zubikzalan@gmail.com"><FiMail /></a></li>
           </ul>
         </div>
-        <div onClick={this.scrollDown} className="intro-arrow"><IoMdArrowDown className="intro-arrow-icon"/></div>
+        <div onClick={this.scrollDown} className="intro-arrow"><IoIosArrowDown className="intro-arrow-icon"/></div>
       </IntroContainer>
     )
   }

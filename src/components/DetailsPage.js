@@ -91,7 +91,7 @@ const DetailsContainer = styled.div`
   .project-grid {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 5fr 5fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   ul {
@@ -105,9 +105,10 @@ const DetailsContainer = styled.div`
     padding: 0.2rem 0.7rem;
     font-family: 'Black Ops One', cursive;
     text-transform: uppercase;
-    margin-right:1rem;
+    margin-right: 1rem;
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    display: inline-block;
   }
 
   .grid-right-button {
@@ -150,7 +151,7 @@ const DetailsContainer = styled.div`
 
   .project-images { 
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
     display: grid;
     grid-gap: 1.2rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -168,8 +169,58 @@ const DetailsContainer = styled.div`
   }
 
   /* Media Queries */
-  @media screen and (max-width: 1173px) {
 
+  @media screen and (max-width: 1042px) {
+    .project-container {
+      width: 85vw;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    ul {
+      justify-content: center;
+    }
+
+    li {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .grid-right-button {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .about {
+      margin-top: 3rem;
+    }
+
+
+    .project-images {
+      margin-right: auto;
+      margin-left: auto;
+      grid-gap: 1.6rem;
+    }
+  }
+
+  @media screen and (max-width: 773px) {
+    .project-images {
+      margin-right: auto;
+      margin-left: auto;
+      width: 70vw;
+      grid-gap: 2rem;
+    }
+
+    .project-images img {
+      cursor: default;
+    }
   }
 `;
 
