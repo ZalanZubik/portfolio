@@ -17,7 +17,6 @@ const Project = ({ project }) => {
 export default Project;
 
 const ProjectContainer = styled.article`
-  margin-top: 2rem;
   background-color: #000;
   position: relative;
   -webkit-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);

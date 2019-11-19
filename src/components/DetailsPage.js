@@ -71,7 +71,7 @@ export default DetailsPage;
 
 const DetailsContainer = styled.div`
   background: var(--backgroundColor);
-  min-height: calc(100vh - 3.7rem);
+  min-height: calc(100vh - 3.7rem - 4rem);
   
   .project-container {
     padding-top: 2.5rem;
@@ -147,11 +147,11 @@ const DetailsContainer = styled.div`
   .description {
     white-space: pre-line;
     text-align: justify;
+    padding-bottom: 3rem;
   }
 
   .project-images { 
-    margin-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
     display: grid;
     grid-gap: 1.2rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -196,10 +196,11 @@ const DetailsContainer = styled.div`
     .grid-right-button {
       margin-left: 0.5rem;
       margin-right: 0.5rem;
+      margin-top: 1rem;
     }
 
     .about {
-      margin-top: 3rem;
+      margin-top: 2.6rem;
     }
 
 

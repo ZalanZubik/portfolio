@@ -9,15 +9,12 @@ class Highlighted extends React.Component {
 
   render() {
     let { highlightedProjects } = this.context;
-    highlightedProjects = highlightedProjects.map(project => {
-      return <Project key={project.id} project={project} />
-    });
 
     return (
       <HighlightedContainer>
         <h1 id="highlighted">Highlighted Projects</h1>
         <div className="highlighted-projects">
-          {highlightedProjects}
+          {highlightedProjects.map(project => <Project key={project.id} project={project} />)}
         </div>
         <Link to="/projects" className="all-projects-button">See more</Link>
       </HighlightedContainer>
@@ -29,7 +26,7 @@ export default Highlighted;
 
 const HighlightedContainer = styled.section`
   text-align: center;
-  padding: 4rem 0 3rem 0;
+  padding: 4.5rem 0 3.5rem 0;
   background: var(--backgroundColor);
 
   h1 {
@@ -37,15 +34,16 @@ const HighlightedContainer = styled.section`
     font-family: 'Black Ops One', cursive;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-size: 2em;
   }
 
   .highlighted-projects {
     width: 95vw;
-    max-width: 1300px;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-row-gap: 2rem;
-    grid-column-gap: 3rem;
+    grid-gap: 2.5rem;
+    padding-top: 2.5rem;
     margin: 0 auto;
   }
 
@@ -71,9 +69,18 @@ const HighlightedContainer = styled.section`
 
   /* Media Queries */
 
+  @media screen and (max-width: 1206px) {
+    .highlighted-projects {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+    }
+  }
+
   @media screen and (max-width: 788px) {
     .highlighted-projects {
-      width: 80vw;
+      width: 68vw;
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
     }
     
   }
