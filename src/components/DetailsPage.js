@@ -105,7 +105,7 @@ const DetailsContainer = styled.div`
     padding: 0.2rem 0.7rem;
     font-family: 'Black Ops One', cursive;
     text-transform: uppercase;
-    margin-right: 1rem;
+    margin-right: 0.6rem;
     font-size: 1rem;
     margin-bottom: 0.5rem;
     display: inline-block;
@@ -125,11 +125,6 @@ const DetailsContainer = styled.div`
     margin-top: 1.5rem;
     transition: color 350ms ease-out, border 350ms ease-out;
     margin-right: 1rem;
-  }
-
-  .grid-right-button:hover {
-    color: var(--hoverColor);
-    border: 2px solid var(--hoverColor);
   }
 
   .button-icon {
@@ -172,7 +167,7 @@ const DetailsContainer = styled.div`
 
   @media screen and (max-width: 1042px) {
     .project-container {
-      width: 85vw;
+      width: 88vw;
     }
 
     .project-grid {
@@ -184,8 +179,8 @@ const DetailsContainer = styled.div`
     }
 
     li {
-      margin-right: 0.5rem;
-      margin-left: 0.5rem;
+      margin-right: 0.3rem;
+      margin-left: 0.3rem;
     }
 
     .button-container {
@@ -215,12 +210,40 @@ const DetailsContainer = styled.div`
     .project-images {
       margin-right: auto;
       margin-left: auto;
-      width: 70vw;
+      width: 88vw;
+      grid-template-columns: 1fr;
       grid-gap: 2rem;
     }
 
     .project-images img {
       cursor: default;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    li {
+      margin-right: 0.3rem;
+      margin-left: 0.3rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .project-title {
+      font-size: 2rem;
+    }
+
+    li {
+      margin-right: 0.1rem;
+      margin-left: 0.1rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .grid-right-button:hover {
+      color: var(--hoverColor);
+      border: 2px solid var(--hoverColor);
     }
   }
 `;

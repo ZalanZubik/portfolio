@@ -29,6 +29,7 @@ const ProjectsContainer = styled.section`
   background: var(--backgroundColor);
   min-height: calc(100vh - 3.7rem - 4rem);
   text-align: center;
+  padding-bottom: 5rem;
 
   .projects-title {
     text-align: center;
@@ -48,7 +49,6 @@ const ProjectsContainer = styled.section`
     grid-gap: 3rem;
     margin: 0 auto;
     padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   /* Media Queries */
@@ -59,7 +59,7 @@ const ProjectsContainer = styled.section`
     }
     
     .projects {
-      width: 68vw;
+      width: 83vw;
       grid-template-columns: 1fr;
     }
   }

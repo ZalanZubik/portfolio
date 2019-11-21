@@ -62,11 +62,6 @@ const HighlightedContainer = styled.section`
     transition: border 450ms ease-out, color 450ms ease-out;
   }
 
-  .all-projects-button:hover {
-    border: 2px solid var(--hoverColor);
-    color: var(--hoverColor);
-  }
-
   /* Media Queries */
 
   @media screen and (max-width: 1206px) {
@@ -78,11 +73,28 @@ const HighlightedContainer = styled.section`
 
   @media screen and (max-width: 788px) {
     .highlighted-projects {
-      width: 68vw;
+      width: 83vw;
       grid-template-columns: 1fr;
       grid-gap: 3rem;
+      padding-top: 1.4rem;
     }
-    
   }
 
+  @media screen and (max-width: 400px) {
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 2rem;
+    }
+    .highlighted-projects {
+      padding-top: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .all-projects-button:hover {
+      border: 2px solid var(--hoverColor);
+      color: var(--hoverColor);
+    }
+  }
 `;

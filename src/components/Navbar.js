@@ -53,6 +53,7 @@ const NavContainer = styled.nav`
     width: 3.2rem;
     display: flex;
     align-items: center;
+    outline: none;
   }
 
   .nav-btn {
@@ -65,10 +66,7 @@ const NavContainer = styled.nav`
   .nav-icon {
     font-size: 2.1rem;
     color: var(--mainWhite);
-  }
-
-  .nav-btn:hover .nav-icon {
-    color: var(--hoverColor);
+    outline: none;
   }
 
   .nav-links {
@@ -89,10 +87,6 @@ const NavContainer = styled.nav`
     font-size: 1.1rem;
     font-family: 'Black Ops One', cursive;
     letter-spacing: 2px;
-  }
-
-  .nav-links a:hover {
-    color: var(--hoverColor);
   }
 
   .show-nav {
@@ -121,6 +115,10 @@ const NavContainer = styled.nav`
     .nav-links a {
       margin: 0 1.5rem;
       padding: 0.5rem 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--hoverColor);
     }
   }
 `;

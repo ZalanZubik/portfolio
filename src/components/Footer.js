@@ -48,11 +48,27 @@ const FooterContainer = styled.footer`
     padding: 4px;
     transition: transform 0.4s ease-out;
   }
-  .footer-links a:hover {
-    transform: translateY(6px);
-  }
 
   p {
     padding-bottom: 0.5rem;
   }
+
+  /* Media Queries */
+
+  @media screen and (min-width: 768px) {
+    .footer-links a:hover {
+      transform: translateY(6px);
+    }
+  }
+
+  @media screen and (max-width: 479px){
+    .footer-links a {
+      font-size: 1.4rem;
+    margin: 0 0.5rem;
+    }
+
+    p {
+      padding-bottom: 0.4rem;
+      font-size: 1rem;
+    }
 `;

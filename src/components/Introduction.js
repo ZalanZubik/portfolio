@@ -125,6 +125,52 @@ const IntroContainer = styled.div`
   
   @media screen and (max-width: 767px) {
     height: 70vh;
+
+    .intro-links a:hover {
+      transform: none;
+    }
+  }
+
+  @media screen and (max-width: 479px){
+    height: 60vh;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    .intro-links {
+      margin-top: 1.5rem;
+    }
+
+    .intro-links a {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 380px){
+    .intro-card {
+      padding: 1.7rem 1.3rem 1.2rem 1.3rem;
+    }
+    
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      padding-top: 0.4rem;
+    }
+
+    .intro-links {
+      margin-top: 1rem;
+    }
+    .intro-links a {
+      font-size: 1.8rem;
+    }
   }
 
 `;
