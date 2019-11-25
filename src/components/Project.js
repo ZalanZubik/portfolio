@@ -8,7 +8,6 @@ const Project = ({ project }) => {
     <ProjectContainer>
       <Link to={`/projects/${slug}`} className="project-link">
         <img src={images[0]} alt="project thumbnail" className="project-thumbnail" />
-        <div className="details-label">Details</div>
       </Link>
     </ProjectContainer>
   )
@@ -17,8 +16,6 @@ const Project = ({ project }) => {
 export default Project;
 
 const ProjectContainer = styled.article`
-  background-color: #000;
-  position: relative;
   -webkit-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
   -moz-box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
   box-shadow: 8px 8px 19px -3px rgba(36,36,36,0.79);
@@ -27,30 +24,17 @@ const ProjectContainer = styled.article`
   .project-thumbnail {
     width: 100%;
     display: block;
-    transition: opacity 550ms ease-in, transform 550ms ease-in;
   }
 
-  .details-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-decoration: none;
-    transform: translate(-50%, -50%);
-    border: 2px solid var(--mainWhite);
-    padding: 0.4rem 1.5rem;
-    color: var(--mainWhite);
-    border-radius: 7px;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 550ms ease-in;
-  }
+  /* Media Queries */
 
-  &:hover .details-label {
-    opacity: 0.9;
-  }
+  @media screen and (min-width: 768px) {
+    .project-thumbnail {
+      transition: transform 500ms ease-in;
+    }
 
-  &:hover .project-thumbnail {
-    opacity: 0.5;
-    transform: scale(1.03);
+    &:hover .project-thumbnail {
+      transform: scale(1.07);
+    }
   }
 `;
