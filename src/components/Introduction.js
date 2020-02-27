@@ -12,7 +12,7 @@ class Introduction extends React.Component {
       behavior: 'smooth'
     });
   }
-  
+
   render() {
     return (
       <IntroContainer>
@@ -26,7 +26,7 @@ class Introduction extends React.Component {
             <li><a title="Email" href="mailto:zubikzalan@gmail.com"><FiMail /></a></li>
           </ul>
         </div>
-        <div onClick={this.scrollDown} className="intro-arrow"><IoIosArrowDown className="intro-arrow-icon"/></div>
+        <div onClick={this.scrollDown} className="intro-arrow"><IoIosArrowDown className="intro-arrow-icon" /></div>
       </IntroContainer>
     )
   }

@@ -18,7 +18,7 @@ class DetailsPage extends React.Component {
   render() {
     const { getProject, openModal } = this.context;
     const project = getProject(this.state.slug);
-    
+
     if (!project) {
       return (
         <NoProjectsContainer>
@@ -31,8 +31,9 @@ class DetailsPage extends React.Component {
     }
 
     const { name, description, images, skills, codeUrl, presentationUrl } = project;
-
     const [thumbnail, mainImage, ...detailsImages] = images;
+
+    document.title = `Zalán Zubik – ${name}`;
 
     return (
       <DetailsContainer>
@@ -41,7 +42,7 @@ class DetailsPage extends React.Component {
           <div className="project-grid">
             <div className="grid-left">
               <img src={mainImage} alt="Project" className="project-image" />
-              
+
             </div>
             <div className="grid-right">
               <ul>
@@ -51,7 +52,7 @@ class DetailsPage extends React.Component {
                 {presentationUrl ? <a className="grid-right-button" href={presentationUrl} target="_blank" rel="noopener noreferrer"><IoMdEye className="button-icon" /> view</a> : ""}
                 {codeUrl ? <a className="grid-right-button" href={codeUrl} target="_blank" rel="noopener noreferrer"><FaCode className="button-icon" /> code</a> : ""}
               </div>
-              
+
             </div>
           </div>
 
@@ -143,6 +144,7 @@ const DetailsContainer = styled.div`
     white-space: pre-line;
     text-align: justify;
     padding-bottom: 3rem;
+    line-height: 1.46;
   }
 
   .project-images { 

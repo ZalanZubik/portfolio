@@ -7,6 +7,7 @@ class ProjectsPage extends React.Component {
   static contextType = ProjectContext;
 
   render() {
+    document.title = "Zalán Zubik – Projects";
     let { projects } = this.context;
     projects = projects.map(project => {
       return <Project key={project.id} project={project} />
@@ -14,11 +15,11 @@ class ProjectsPage extends React.Component {
 
     return (
       <ProjectsContainer>
-      <h1 className="projects-title">Projects</h1>
-      <div className="projects">
-        {projects}
-      </div>
-    </ProjectsContainer>
+        <h1 className="projects-title">Projects</h1>
+        <div className="projects">
+          {projects}
+        </div>
+      </ProjectsContainer>
     )
   }
 }
