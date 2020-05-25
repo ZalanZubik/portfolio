@@ -9,16 +9,19 @@ class Highlighted extends React.Component {
 
   render() {
     let { highlightedProjects } = this.context;
-
     return (
       <HighlightedContainer>
-        <h1 id="highlighted">Highlighted Projects</h1>
-        <div className="highlighted-projects">
-          {highlightedProjects.map(project => <Project key={project.id} project={project} />)}
+        <h1 id='highlighted'>Latest Projects</h1>
+        <div className='highlighted-projects'>
+          {highlightedProjects.map((project) => (
+            <Project key={project.id} project={project} />
+          ))}
         </div>
-        <Link to="/projects" className="all-projects-button">See more</Link>
+        <Link to='/projects' className='all-projects-button'>
+          All projects
+        </Link>
       </HighlightedContainer>
-    )
+    );
   }
 }
 

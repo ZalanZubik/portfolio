@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ErrorImg from '../images/ErrorImg.jpg';
+import ErrorImgLow from '../images/ErrorImg_lowres.jpg';
 
 const ErrorPage = () => {
   return (
@@ -23,7 +24,7 @@ const ErrorContainer = styled.div`
   padding-bottom: 10rem;
   align-items: center;
   justify-content: center;
-  background: url(${ErrorImg}) center/cover no-repeat;
+  background: url(${ErrorImg}) center/cover no-repeat, url(${ErrorImgLow}) center/cover no-repeat;
 
   .error-card {
     width: 50vh;

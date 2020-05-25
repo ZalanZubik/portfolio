@@ -7,20 +7,18 @@ class ProjectsPage extends React.Component {
   static contextType = ProjectContext;
 
   render() {
-    document.title = "Zalán Zubik – Projects";
+    document.title = 'Zalán Zubik – Projects';
     let { projects } = this.context;
-    projects = projects.map(project => {
-      return <Project key={project.id} project={project} />
+    projects = projects.map((project) => {
+      return <Project key={project.id} project={project} />;
     });
 
     return (
       <ProjectsContainer>
-        <h1 className="projects-title">Projects</h1>
-        <div className="projects">
-          {projects}
-        </div>
+        <h1 className='projects-title'>Projects</h1>
+        <div className='projects'>{projects}</div>
       </ProjectsContainer>
-    )
+    );
   }
 }
 
@@ -53,12 +51,12 @@ const ProjectsContainer = styled.section`
   }
 
   /* Media Queries */
-  
+
   @media screen and (max-width: 830px) {
     .projects-title {
       font-size: 2.5rem;
     }
-    
+
     .projects {
       width: 83vw;
       grid-template-columns: 1fr;

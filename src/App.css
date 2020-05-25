@@ -1,10 +1,10 @@
 :root {
-  --backgroundColor: #ECECEC;
-  --mainWhite: #F7F7F7;
-  --darkBlue: #003B3E;
-  --darkestBlue: #002E30;
-  --lightBlue: #017A80;
-  --hoverColor: #01A9B0;
+  --backgroundColor: #ececec;
+  --mainWhite: #f7f7f7;
+  --darkBlue: #003b3e;
+  --darkestBlue: #002e30;
+  --lightBlue: #017a80;
+  --hoverColor: #01a9b0;
 }
 
 * {
@@ -22,6 +22,16 @@ body {
   line-height: 1.4;
 }
 
-a, button {
+@font-face {
+  font-family: 'Oswald';
+  src: url('./fonts/Oswald-Regular.woff2') format('woff2'), url('./fonts/Oswald-Regular.woff') format('woff'),
+    url('./fonts/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+a,
+button {
   -webkit-tap-highlight-color: transparent;
 }

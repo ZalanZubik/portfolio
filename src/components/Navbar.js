@@ -85,7 +85,7 @@ const NavContainer = styled.nav`
     text-align: center;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: 'Black Ops One', cursive;
+    font-family: 'Black Ops One', sans-serif;
     letter-spacing: 2px;
   }
 
